@@ -1,0 +1,11 @@
+node_modules
+
+web/app.bundle.css
+web/app.bundle.js
+web/fonts/*
+web/images/*
+web/vendor.bundle.js
+
+.DS_Store
+
+package-lock.json

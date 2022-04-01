@@ -1,0 +1,15 @@
+// Special typescript project file, used by eslint only.
+{
+    "extends": "./tsconfig.json",
+    "include": [
+        // repeated from base config's "include" setting
+        "src/ts/**/*",
+        "src/@types/**/*",
+
+        // these are the eslint-only inclusions
+        ".eslintrc.js",
+        "webpack.common.js",
+        "webpack.dev.js",
+        "webpack.prod.js",
+    ]
+}
