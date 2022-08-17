@@ -6,13 +6,11 @@ type AppProps = {
   toggleManualDarkMode: () => void;
 }
 
-type AppState = {
-
-};
+type AppState = Record<string, never>;
 
 class App extends React.Component<AppProps, AppState>
 {
-  state: AppState = {}
+  state: AppState = {};
 
   render(): React.ReactNode {
     return <div>

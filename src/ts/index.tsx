@@ -11,17 +11,19 @@ const AppWrapper = (): JSX.Element => {
   const prefersDarkMode = false;  // TDOD: useMediaQuery("(prefers-color-scheme: dark)");
   const [manualDarkMode, setManualDarkMode] = React.useState(false);
 
-  const isDarkMode = (manualDarkMode: boolean, prefersDarkMode: boolean) => 
-    (manualDarkMode && !prefersDarkMode) || (!manualDarkMode && prefersDarkMode);
+  const isDarkMode = React.useCallback((manualDarkMode: boolean, prefersDarkMode: boolean) => 
+    (manualDarkMode && !prefersDarkMode) || (!manualDarkMode && prefersDarkMode), []);
 
   const theme = React.useMemo(
-    () => {
-      darkMode: isDarkMode(prefersDarkMode, manualDarkMode)
+    () => { 
+      return {
+        darkMode: isDarkMode(prefersDarkMode, manualDarkMode)
+      };
     },
-    [prefersDarkMode, manualDarkMode],
+    [isDarkMode, prefersDarkMode, manualDarkMode],
   );
 
-  return <App darkMode={isDarkMode(prefersDarkMode, manualDarkMode)}
+  return <App darkMode={theme.darkMode}
     toggleManualDarkMode={() => setManualDarkMode(!manualDarkMode)} />;
 };
 

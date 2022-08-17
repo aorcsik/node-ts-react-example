@@ -1,11 +1,12 @@
 version: "2"
 services:
   node:
+    hostname: localhost
     image: "node:16"
     user: "node"
     working_dir: /home/node/app
     ports:
-        - "8081:8081"
+      - "8081:8081"
     environment:
       - NODE_ENV=development
       - NODE_PORT=8081

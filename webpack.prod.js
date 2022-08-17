@@ -1,4 +1,5 @@
-/* eslint-env amd,node,browser:false */
+/* eslint-env amd, node, browser:false */
+/* eslint "@typescript-eslint/no-var-requires": 0 */
 
 const webpack = require("webpack");
 const { merge } = require("webpack-merge");
