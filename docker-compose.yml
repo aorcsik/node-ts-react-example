@@ -10,7 +10,7 @@ services:
     environment:
       - NODE_ENV=development
       - NODE_PORT=8081
-      - NODE_WEB_DIR=/web
+      - NODE_WEB_DIR=/dist
     volumes:
       - ./:/home/node/app
     expose:

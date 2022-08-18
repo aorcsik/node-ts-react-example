@@ -1,10 +1,10 @@
 node_modules
 
-web/app.bundle.css
-web/app.bundle.js
-web/fonts/*
-web/images/*
-web/vendor.bundle.js
+dist/app.bundle.css
+dist/app.bundle.js
+dist/fonts/*
+dist/images/*
+dist/vendor.bundle.js
 
 .DS_Store
 

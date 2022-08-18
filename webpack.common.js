@@ -13,7 +13,7 @@ module.exports = {
     app: "./src/ts/index.tsx",
   },
   output: {
-    path: path.resolve(__dirname, "web"),
+    path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js"
   },
   plugins: [
